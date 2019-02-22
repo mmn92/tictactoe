@@ -1,4 +1,4 @@
-    import React, { Fragment } from 'react';
+    import React from 'react';
     import ReactDOM from 'react-dom';
     import './index.css';
     import logo from './img/tictactoe3.png';
@@ -108,7 +108,7 @@
 
       return (
         <div>
-          <img class="logo" alt="tictactoe" src={logo}/>         
+          <img className="logo" alt="tictactoe" src={logo}/>         
           <div className="game">
             <div className="game-board">
               <Board 
