@@ -1,10 +1,20 @@
 import React from 'react';
 
-function Square(props){
-    let squareId = props.isBold ? "bold-square" : "square";
-    return (
-        <button className={squareId} onClick={props.onClick}>
-            {props.value}
-        </button>
-    );
+import { Button, ButtonBold } from './styles';
+
+export const Square = (props) => {
+    //let squareId = props.isBold ? "bold-square" : "square";
+    if(props.isBold){
+        return (
+            <ButtonBold onClick={props.onClick}>
+                {props.value}
+            </ButtonBold>
+        );
+    } else {
+        return (
+            <Button onClick={props.onClick}>
+                {props.value}
+            </Button>
+        );
+    }
 }
